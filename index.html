@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html class="nojs html" lang="en-US">
+
+<!-- Mirrored from berjaya2.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Mar 2021 05:29:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="ONE2SIX-99">
+    <meta name="author" content="ONE2SIX-99">
+    <meta property="og:image" content="images/berjaya2_logo.png"/>
+    <link rel="icon" href="images/logo.ico">
+
+    <title>ONE2SIX-99</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">	
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Dont actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<link href="css/css3.css" rel="stylesheet" type="text/css"/>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'/>
+
+
+<style>
+	.transition-timer-carousel-progress-bar {
+	    height: 5px;
+		background-image: -webkit-linear-gradient(top, #ffffff, #E8B923);
+		background-image: -moz-linear-gradient(top, #ffffff, #E8B923);
+		background-image: -ms-linear-gradient(top, #ffffff, #E8B923);
+		background-image: -o-linear-gradient(top, #ffffff, #E8B923);
+		background-image: linear-gradient(to bottom, #ffffff, #E8B923);
+	    width: 0%;
+	    margin: 0px auto;
+	    border: none;
+	    z-index: 11;
+	    position: relative;
+	}
+	#popOut
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		min-height: 100vh;
+	}
+	.popup_img{
+		z-index:10003;
+	}
+	
+	#ContentPlaceHolder1_popup_img{
+		width:100%;
+		height:auto;
+	}
+	.btnCopy {
+		width: 10px;
+		height: 28px;
+		text-align: center;
+		border-radius: 8px;
+		background-color: #E8B923;
+		display: block;
+		border: 1px solid black;	
+	}
+	.bgBtn:hover{
+		background-color: #E8B923;
+		color: black;
+	}
+	.bgBtn:hover span
+	{
+	    color: black;
+	}
+	.bgBtn{	
+		width: 100px;
+		text-align: center;
+		background-color: Transparent;
+		border: 1px solid #E8B923;
+		font-size: 10px;
+		display: block;
+		color: #E8B923;
+		margin: 0 auto;
+	}
+	.fa-desktop{
+		color: #FFFFFF;
+	}
+	.fa-mobile-alt{
+		color: #FFFFFF;
+	}
+	.fa-apple{
+		color: #FFFFFF;
+		font-size: 13px;
+	}
+	.fa-android{		
+		color: #FFFFFF;
+		font-size: 13px;
+	}		
+	.tales {
+		width: 100%;		
+		/*height: 200px;*/
+	}
+	.active {
+		background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+
+	@keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+	
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+		.text {font-size: 11px}
+	}
+
+	@media (max-width: 768px) {
+		.carousel .item{
+    		min-height: 88px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+    	}
+    	.row{
+    
+    	}
+    	.tales {
+    		height: auto;
+    	}
+    	.bgBtn{
+    	    width: 80px;
+    	}
+    	.game-logo{
+    	    width: 180px;
+    	    height: auto;
+    	}
+    	.gameDIV{
+    	    padding-left:20px;
+    	    padding-right:20px;
+    	}
+    }
+	
+</style>
+<script>
+function copyfieldvalue(link){
+	$("#copyInput").val(link);
+	$('#copyModal').modal({
+		backdrop: 'static',
+		keyboard: false
+  });
+	$("#copyInput").select();
+	$("#copyBtn").on("click", function(){
+	$("#copyInput").select();
+		document.execCommand("copy");
+	$('#copyModal').modal('hide');
+  });
+ }
+
+
+
+ function changeLanguage(language){
+     localStorage.setItem("language",language);
+	if(language == "en")
+	{ // ENGLISH
+		document.body.className='en';
+		$(".en").show();
+		$(".zh").hide();
+		$(".ms").hide();
+		$("#feedback").attr("placeholder", "Feedback Here! (Please leave your ID when you Feedback)");
+		$("#email").attr("placeholder", "Enter Email Address (Optional)");
+		$("#contact").attr("placeholder", "Enter Contact Number");
+		$("#branch").attr("placeholder", "Enter Full Username (ID)");	  
+	}
+	
+	else if(language == "zh")
+	{
+		document.body.className='zh';
+		$(".en").hide();
+		$(".zh").show();
+		$(".ms").hide();
+		$("#feedback").attr("placeholder", "在此留言 / (请在留言后留下ID)");
+		$("#email").attr("placeholder", "电邮地址 (可不填写)");
+		$("#contact").attr("placeholder", "输入联络号码");
+		$("#branch").attr("placeholder", "输入用户名ID");
+	  
+	}
+	else if(language == "ms")
+	{
+		document.body.className='ms';
+		currentLang = "ms";
+		$(".en").hide();
+		$(".zh").hide();
+		$(".ms").show();
+		$("#feedback").attr("placeholder", "Maklum balas di sini (Sila tinggalkan ID anda semasa anda Maklum Balas)");
+		$("#email").attr("placeholder", "E-mel (Pilihan)");
+		$("#contact").attr("placeholder", "Masukkan Nombor Hubungan");
+		$("#branch").attr("placeholder", "Masukkan Nama Pengguna");
+	  
+	}
+	
+}
+
+function validateForm() {
+	var feedbackForm= $('#feedbackForm').serializeArray();
+	for(var i=0;i< feedbackForm.length; i++){
+		var labelForm = feedbackForm[i]["name"];
+		var labelFormValue = feedbackForm[i]["value"];
+		if (feedbackForm[i]["value"].trim()==null || feedbackForm[i]["value"].trim()==""|| feedbackForm[i]["value"]===" ") {
+			if (labelForm == "branch"){
+				alert('Please filled up FULL USERNAME!');
+				return false;
+				break;
+			}else if(labelForm == "contact"){
+				alert('Please filled up your CONTACR NUMBER!');
+				return false;
+				break;
+			}else if(labelForm == "comments"){
+				alert('Please filled up COMMENT!');
+				return false;
+				break;	
+			}else if(labelForm == "type"){
+				alert('Please select FEEDBACK TYPE');
+				return false;
+				break;
+			}
+		}
+	}
+	
+	return true;
+}
+
+</script>
+<script>
+</script>
+
+<style>
+</style>
+
+		<style>
+			#popOut{
+				display:none;
+			}
+		</style><script>
+	var defaultLanguage = "";
+	var localLanguage = localStorage.getItem("language");
+	if(localLanguage == "en")
+	{
+			defaultLanguage = "en";
+	}
+	else if(localLanguage == "zh")
+	{
+	    	defaultLanguage = "zh";
+	}
+	else if(localLanguage == "ms")
+	{
+	    	defaultLanguage = "ms";
+	}
+	else
+	{
+	    var userLanguage = window.navigator.languages[0];
+    	if((userLanguage == "en") || (userLanguage == "en-US") || (userLanguage == "en-GB") || (userLanguage == "en-AU") || (userLanguage == "en-NZ"))
+    	{
+    		defaultLanguage = "en";
+    	}
+    	else if((userLanguage == "zh") || (userLanguage == "zh-CN") || (userLanguage == "zh-TW") || (userLanguage == "zh-HK"))
+    	{
+    		defaultLanguage = "zh";
+    	}
+    	else if((userLanguage == "ms") || (userLanguage == "id"))
+    	{
+    		defaultLanguage = "ms";
+    	}
+    	else
+    	{
+    		defaultLanguage = "en";
+    	}
+	}
+	
+        $(document).ready(function () {
+            var musicStatus = localStorage.getItem("music");
+            if (musicStatus == 0)
+            {
+                $("#musicPlayer").html("");
+            }
+            if ($(window).width() < 768) {
+                 $("#ContentPlaceHolder1_popup_img").attr("src","");
+            }
+            $("#masklayer").click(function () {
+                $(".popup_img").fadeOut(100);
+                $("#masklayer").fadeOut(100);
+            });
+            var percent = 0, bar = $('.transition-timer-carousel-progress-bar'), crsl = $('#myCarousel');
+				function progressBarCarousel() {
+				  bar.css({width:percent+'%'});
+				 percent = percent +0.5;
+				  if (percent>100) {
+				      percent=0;
+				      crsl.carousel('next');
+				  }      
+				}
+				crsl.carousel({
+				    interval: false,
+				    pause: true
+				}).on('slid.bs.carousel', function () {});var barInterval = setInterval(progressBarCarousel, 30);
+				crsl.hover(
+				    function(){
+				        clearInterval(barInterval);
+				    },
+				    function(){
+				        barInterval = setInterval(progressBarCarousel, 30);
+	          })
+			//Detect language
+			$('#changeLanguage option[value="'+defaultLanguage+'"]').attr("selected",true);
+			changeLanguage(defaultLanguage);
+			$("#changeLanguage").on('change', function(){
+			   changeLanguage($(this).val());
+			 })
+        });
+		document.onclick=function() {
+			closePopup();
+			}
+        function closePopup() {
+            $(".popup_img").fadeOut(100);
+            $("#masklayer").fadeOut(100);
+        }
+</script>
+<style>
+#header
+{
+        
+}
+@media (max-width: 768px) {
+    #header
+    {
+                
+    }
+}
+</style>
+</head>
+<body>
+<div>
+    <main role="main">
+    	<div id="page" class="container" style="background: url(images/background/T002_bg.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+		<div class="row">
+		<div id="header">
+			<div class="col-sm-12" id="marquee-div">
+				<div class="row">
+					<div class="col-sm-12">
+						&nbsp;&nbsp;
+					</div>
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-10">
+						<div class="row">
+					
+							<div class="col-sm-11">
+								<marquee id="text-marquee">
+								    <span class="en">Deposit can get Free Bonus</span>
+								    <span class="zh">充值将获得免费红利</span>
+								    <span class="ms">Deposit boleh mendapatkan Bonus Percuma</span>
+								</marquee>
+							</div>
+							<div class="col-sm-1">
+								<span class="langDiv">
+									<select class="input" id="changeLanguage">
+										<option value="en">English</option>
+										<option value="zh">简体中文</option>
+										<option value="ms">B.Melayu</option>
+									</select>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-1">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-10">
+						<div class="row">							
+							<div class="col-md-4">
+								<div class="logo-div centerDiv"><div>&nbsp;</div><a href="index-2.html"><img class="center img-responsive imgLogo" src="images/berjaya2_logo.png" alt="BERJAYA2"/></a></div>
+							</div>
+													
+							<div class="col-md-8">
+								<div class="contact" style="text-align:right;">
+									<div class="clearfix colelem" id="counterfeiting"><!-- content -->
+										 <span id="counterfeitingEnglish" class="centerDiv en">(Beware counterfeiting, please contact our customer service to verify is that our company sub-line)</span>
+										 <span id="counterfeitingMandarin" class="centerDiv zh">(提防假冒，请致电我们的客户中心以确认是否是我们的公司的子线)</span>
+										 <span id="counterfeitingMelayu" class="centerDiv ms">(Berhati-hati pemalsuan, sila hubungi Perkhidmatan Pelanggan kami untuk mengesahkan adalah bahawa sub-syarikat syarikat kami)</span>
+										 <br/>
+									</div>
+									<div class="clearfix colelem row"><!-- content -->
+										<div class="col-md-6 contact-div">
+											 <span class="contactTitle-span">
+												<span lang="en" class="en">CONTACT US: </span>
+												<span lang="zh" class="zh">联系我们: </span>
+												<span lang="ms" class="ms">HUBUNGI KAMI: </span>
+											 </span>
+											 <span class="contact-span"></span>
+										</div>
+										 <div class="col-md-6 contact-div">
+											 <span class="contactTitle-span ">
+												<span lang="en" class="en">Email: </span>
+												<span lang="zh" class="zh">电子邮件: </span>
+												<span lang="ms" class="ms">E-mel: </span>
+											</span> <span class="email-span">one2six99@gmail.com</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-1">
+					</div>
+				</div>
+			</div>
+		</div>
+			
+			
+				<div class="col-sm-1">&nbsp;</div>	
+				<div class="col-sm-10" style="top:20px;">
+				<div class="slideshow-container ">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+				
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					
+					</ol>   
+					<!-- Wrapper for carousel items -->
+					<div class="carousel-inner">
+				
+							<div class="tales item active"" >
+								<img src="images/slide/Slide_2_%e8%b5%94%e7%8e%87%e5%9b%be-%e7%bd%91%e7%ab%99-1.jpg" alt="Slide_2 class:"" ">
+							</div>
+					
+				</div>
+				<hr class="transition-timer-carousel-progress-bar" />
+					<!-- Carousel controls -->
+					<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="carousel-control right" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
+			</div>
+			</div>
+			<div class="col-sm-1">&nbsp;</div>			
+			<div class="col-sm-12 gameContent">
+				<div class="row">
+					<div class="col-sm-1">
+						&nbsp;
+					</div>
+					<div class="col-sm-10 container-fluid">
+						<div class="row">
+						
+
+							<!--              1Slot                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/1slot.png' title='1Slot' alt='1Slot' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://appdownload.1slotapp.cc/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://appdownload.1slotapp.cc/');" title='http://appdownload.1slotapp.cc'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://appdownload.1slotapp.cc/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://appdownload.1slotapp.cc/');" title='http://appdownload.1slotapp.cc'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div>
+
+							<!--              Berjaya                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/berjaya.png' title='Berjaya' alt='Berjaya' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dl.bjaya88.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dl.bjaya88.com/');" title='http://dl.bjaya88.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dl.bday88.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dl.bday88.com/');" title='http://dl.bday88.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://bjaya88.com/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://bjaya88.com/');" title='https://bjaya88.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              918Kaya                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/918kaya.png' title='918Kaya' alt='918Kaya' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://appdownload.jra777.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://appdownload.jra777.com/');" title='http://appdownload.jra777.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://appdownload.jra777.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://appdownload.jra777.com/');" title='http://appdownload.jra777.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-md'></div>
+
+							<!--              Poly99                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/poly99.png' title='Poly99' alt='Poly99' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://download.poly99online.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://download.poly99online.com/');" title='https://download.poly99online.com/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://download.poly99online.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://download.poly99online.com/');" title='https://download.poly99online.com/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-lg'></div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              Mega888                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/mega888.png' title='Mega888' alt='Mega888' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.gldqp.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.gldqp.com/');" title='http://m.gldqp.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.gldqp.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.gldqp.com/');" title='http://m.gldqp.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.gldqp.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Mobile</span>
+													<span class="zh">电话版</span>
+													<span class="ms">Mobile</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.gldqp.com/');" title='http://m.gldqp.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div>
+
+							<!--              Live22                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/live22.png' title='Live22' alt='Live22' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://huangcha22.com/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://huangcha22.com/');" title='http://huangcha22.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://huangcha22.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://huangcha22.com/');" title='http://huangcha22.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://huangcha22.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://huangcha22.com/');" title='http://huangcha22.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://huangcha22.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Mobile</span>
+													<span class="zh">电话版</span>
+													<span class="ms">Mobile</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://huangcha22.com/');" title='http://huangcha22.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://huangcha22.com/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://huangcha22.com/');" title='http://huangcha22.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-md'></div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              SunCity Casino                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/suncity.png' title='SunCity Casino' alt='SunCity Casino' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://clubsuncity.gojellyfish888.com/installer', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://clubsuncity.gojellyfish888.com/installer');" title='http://ClubSunCity.gojellyfish888.com/installer'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://clubsuncity.gojellyfish888.com/app/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Slot</span>
+													<span class="zh">老虎机</span>
+													<span class="ms">Slot</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://clubsuncity.gojellyfish888.com/app/');" title='https://clubsuncity.gojellyfish888.com/app/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://clubsuncity.gojellyfish888.com/app/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://clubsuncity.gojellyfish888.com/app/');" title='https://clubsuncity.gojellyfish888.com/app/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://clubsuncity.gojellyfish888.com/app/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://clubsuncity.gojellyfish888.com/app/');" title='https://clubsuncity.gojellyfish888.com/app/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div>
+
+							<!--              Pussy                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/pussy888.png' title='Pussy' alt='Pussy' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dm21.pussy888.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dm21.pussy888.com/');" title='http://dm21.pussy888.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dm21.pussy888.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dm21.pussy888.com/');" title='http://dm21.pussy888.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-lg'></div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              XE88                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/xe-88.png' title='XE88' alt='XE88' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://d1.playalotgames.com/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://d1.playalotgames.com/');" title='http://d1.playalotgames.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://d1.playalotgames.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://d1.playalotgames.com/');" title='http://d1.playalotgames.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://d1.playalotgames.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://d1.playalotgames.com/');" title='http://d1.playalotgames.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-md'></div>
+
+							<!--              SCR888 2                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/SCR2.png' title='SCR888 2' alt='SCR888 2' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dl.918kiss.agency/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dl.918kiss.agency/');" title='http://dl.918kiss.agency'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dl.918kiss.agency/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dl.918kiss.agency/');" title='http://dl.918kiss.agency'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dl.918kiss.agency/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dl.918kiss.agency/');" title='http://dl.918kiss.agency'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dl.918kiss.agency/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Mobile</span>
+													<span class="zh">电话版</span>
+													<span class="ms">Mobile</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dl.918kiss.agency/');" title='http://dl.918kiss.agency'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://dl.918kiss.agency/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Slot</span>
+													<span class="zh">老虎机</span>
+													<span class="ms">Slot</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://dl.918kiss.agency/');" title='http://dl.918kiss.agency'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              PlayGirl888                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/playgirl888.png' title='PlayGirl888' alt='PlayGirl888' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.playgirl888.me/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.playgirl888.me/');" title='http://www.playgirl888.me/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.playgirl888.me/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.playgirl888.me/');" title='http://www.playgirl888.me/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div>
+
+							<!--              Joker                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/joker.png' title='Joker' alt='Joker' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.joker123b.net/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.joker123b.net/');" title='http://www.joker123b.net'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://bit.ly/JOKERapp', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://bit.ly/JOKERapp');" title='http://bit.ly/JOKERapp'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.joker123b.net/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.joker123b.net/');" title='http://www.joker123b.net'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-lg'></div><div class='clearfix visible-md'></div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              NewTown Casino                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/newtown.png' title='NewTown Casino' alt='NewTown Casino' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://link.newplay66.com/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://link.newplay66.com/');" title='http://link.newplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.newplay66.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Mobile</span>
+													<span class="zh">电话版</span>
+													<span class="ms">Mobile</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.newplay66.com/');" title='http://m.newplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.newplay66.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Live</span>
+													<span class="zh">线上</span>
+													<span class="ms">Live</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.newplay66.com/');" title='http://m.newplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.newplay66.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.newplay66.com/');" title='http://www.newplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div>
+
+							<!--              Lucky Palace                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/lucky_palace.png' title='Lucky Palace' alt='Lucky Palace' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.ld176988.com/download.html', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Slot</span>
+													<span class="zh">老虎机</span>
+													<span class="ms">Slot</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.ld176988.com/download.html');" title='http://m.ld176988.com/download.html'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.ld176988.com/live/download.html', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Live</span>
+													<span class="zh">线上</span>
+													<span class="ms">Live</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.ld176988.com/live/download.html');" title='http://m.ld176988.com/live/download.html'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://cdn.lpe88.club/m.html', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://cdn.lpe88.club/m.html');" title='http://cdn.lpe88.club/m.html'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://cdn.lpe88.com/setup.exe', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://cdn.lpe88.com/setup.exe');" title='http://cdn.lpe88.com/setup.exe '><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              Rollex Casino                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/rollex.png' title='Rollex Casino' alt='Rollex Casino' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://link.roxplay66.com/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://link.roxplay66.com/');" title='http://link.roxplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.roxplay66.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.roxplay66.com/');" title='http://m.roxplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.roxplay66.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Slot</span>
+													<span class="zh">老虎机</span>
+													<span class="ms">Slot</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.roxplay66.com/');" title='http://m.roxplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.roxplay66.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Live</span>
+													<span class="zh">线上</span>
+													<span class="ms">Live</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.roxplay66.com/');" title='http://m.roxplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.roxplay66.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.roxplay66.com/');" title='http://www.roxplay66.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-md'></div>
+
+							<!--              GW99                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/GW99.png' title='GW99' alt='GW99' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://gw128.goray888.com/installer/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://gw128.goray888.com/installer/');" title='https://gw128.goray888.com/installer/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://gw128.goray888.com/APP/GW99', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://gw128.goray888.com/APP/GW99');" title='https://gw128.goray888.com/APP/GW99'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://gw128.goray888.com/APP/GW99', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://gw128.goray888.com/APP/GW99');" title='https://gw128.goray888.com/APP/GW99'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-lg'></div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              Play80Y                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/Play80Y.png' title='Play80Y' alt='Play80Y' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://kenzo.gofrog888.com/Installer', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://kenzo.gofrog888.com/Installer');" title='https://kenzo.gofrog888.com/Installer'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://kenzo.gofrog888.com/APP', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://kenzo.gofrog888.com/APP');" title='https://kenzo.gofrog888.com/APP'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://kenzo.gofrog888.com/APP', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://kenzo.gofrog888.com/APP');" title='https://kenzo.gofrog888.com/APP'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div>
+
+							<!--              Kenzo                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/kenzo.png' title='Kenzo' alt='Kenzo' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://kenzo.gofrog888.com/Installer', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://kenzo.gofrog888.com/Installer');" title='https://kenzo.gofrog888.com/Installer'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://kenzo.gofrog888.com/APP', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://kenzo.gofrog888.com/APP');" title='https://kenzo.gofrog888.com/APP'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://kenzo.gofrog888.com/APP', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://kenzo.gofrog888.com/APP');" title='https://kenzo.gofrog888.com/APP'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-md'></div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              Kiss 918                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/kiss918.png' title='Kiss 918' alt='Kiss 918' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://a1.d.918kiss.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://a1.d.918kiss.com/');" title='http://a1.d.918kiss.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://a1.d.918kiss.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://a1.d.918kiss.com/');" title='http://a1.d.918kiss.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://a1.d.918kiss.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Mobile</span>
+													<span class="zh">电话版</span>
+													<span class="ms">Mobile</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://a1.d.918kiss.com/');" title='http://a1.d.918kiss.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div>
+
+							<!--              SKY 777                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/sky777.png' title='SKY 777' alt='SKY 777' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://qr.sk777.cc/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://qr.sk777.cc/');" title='http://qr.sk777.cc'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.sk777.cc/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.sk777.cc/');" title='http://www.sk777.cc'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m.sk777.cc/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Mobile</span>
+													<span class="zh">电话版</span>
+													<span class="ms">Mobile</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m.sk777.cc/');" title='http://m.sk777.cc'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-lg'></div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              3 Win 8 Casino                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/3win8.png' title='3 Win 8 Casino' alt='3 Win 8 Casino' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m11.3win8.com/download', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m11.3win8.com/download');" title='http://m11.3win8.com/download'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m11.3win8.com/download', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m11.3win8.com/download');" title='http://m11.3win8.com/download'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://m11.3win8.com/download', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://m11.3win8.com/download');" title='http://m11.3win8.com/download'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-md'></div>
+
+							<!--              MaxBet                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/maxbet.png' title='MaxBet' alt='MaxBet' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://www.webook88.com/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://www.webook88.com/');" title='https://www.webook88.com/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://www.webook88.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Mobile</span>
+													<span class="zh">电话版</span>
+													<span class="ms">Mobile</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://www.webook88.com/');" title='https://www.webook88.com/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://www.webook88.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://www.webook88.com/');" title='https://www.webook88.com/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://www.webook88.com/', '_blank');">
+													<span class="fab fa-apple"> </span> 
+													<span class="en">IOS</span>
+													<span class="zh">苹果</span>
+													<span class="ms">IOS</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://www.webook88.com/');" title='https://www.webook88.com/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('https://www.webook88.com/', '_blank');">
+													<span class="fas fa-mobile-alt"> </span> 
+													<span class="en">Slot</span>
+													<span class="zh">老虎机</span>
+													<span class="ms">Slot</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('https://www.webook88.com/');" title='https://www.webook88.com/'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+									</div>
+									<div class='col-sm-2'></div>
+								</div><div class='clearfix visible-sm visible-xs'></div>
+
+							<!--              Happy Fishing Casino                -->
+								<div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 centerDiv gameDIV'>
+								<img src='images/games/yvle_world.png' title='Happy Fishing Casino' alt='Happy Fishing Casino' class='game-logo' valign='middle' />
+									<div class='row'>
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnOdd' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.mg92.com/', '_blank');">
+													<span class="fas fa-desktop"> </span> 
+													<span class="en">PC</span>
+													<span class="zh">电脑版</span>
+													<span class="ms">PC</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.mg92.com/');" title='http://www.mg92.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										
+											<div class='col-xs-6 col-sm-6 col-lg-6 downloadLinkDivbtnEven' style='margin-top:4px;'>
+												<button class="btn bgBtn " onclick="window.open('http://www.mg92.com/', '_blank');">
+													<span class="fab fa-android"> </span> 
+													<span class="en">Android</span>
+													<span class="zh">安卓</span>
+													<span class="ms">Android</span>
+												</button>
+												<div class='copy-button mobileHide centerDiv'  style='margin-top:6px;margin-bottom:6px; white-space: nowrap' onClick="copyfieldvalue('http://www.mg92.com/');" title='http://www.mg92.com'><!-- container box -->
+													 <div class='copy-text'><!-- content -->
+													 	<div class="en">COPY LINK</div>
+													 	<div class="zh">复制链接</div>
+													 	<div class="ms">SALIN PAUTAN</div>
+													 </div>
+												</div>
+											</div>
+										<div class='clearfix visible-sm visible-lg'></div>
+									</div>
+									<div class='col-sm-2'></div>
+								</div> 
+						
+						</div>
+					</div>
+					<div class="col-sm-1">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-12">
+				&nbsp;&nbsp;
+			</div>
+			<div class="col-sm-12" id="footer">
+				<div class="row">
+					<div class="col-md-1">
+						&nbsp;
+					</div>
+					<div class="col-md-10">
+						<div style="height:30px;">
+							&nbsp;
+						</div>		
+			</div>
+	</main>
+</div>
+<div id="popOut">
+	<div class="popup_img" style="width:90%;top:50px;">
+		<div class="closeBtn" style="position: absolute; cursor: pointer; z-index: 100;" onclick="javascript:closePopup()">
+		<img src="images/closeBtn.png" class="img-responsive"/>
+		</div>
+		<img id="ContentPlaceHolder1_popup_img" src="#" width="800px" height="auto" style="border-width:0px;display: inline-block;"/>
+		<div style="background:white;display: inline-block;width: 100%;">
+			<div style="padding-left: 15px;">
+			</div>
+		</div>
+	</div>
+</div>
+<div id="copyModal" class="modal fade">
+ <div class="modal-dialog modal-confirm">
+  <div class="modal-content">
+   <div class="modal-header">
+	<div class="icon-box">
+	 <i class="material-icons"></i>
+	</div>    
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+   </div>
+   <div class="modal-body">
+	<h3>Please click 'Copy' button to copy</h3>
+	<input type="text" id="copyInput" class="form-control" readonly="readonly" />
+   </div>
+   <div class="modal-footer">
+	<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+	<button type="button" class="btn btn-primary" id="copyBtn">Copy</button>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+
+<!-- End of LiveChat code -->
+
+<div id="musicPlayer"></div>
+
+<!-- Pixel -->
+<iframe src="https://gpporder.com/pixel/bjy2.html" height="1" width="1"></iframe>
+</body>
+
+<!-- Mirrored from berjaya2.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Mar 2021 05:32:09 GMT -->
+</html>
